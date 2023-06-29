@@ -10,6 +10,6 @@ require('./config/db')()
 
 app.use(bodyParser.json())
 app.use('/',book)
-app.use('/',author)
+app.use('/author',author)
 
 app.listen(port,()=>console.log(`app listening on port ${port}`))
