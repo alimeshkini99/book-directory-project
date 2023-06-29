@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 const bookModel = new mongoose.Schema({
-  title: { type: String, required:'{PATH} is required ' },
+  title: { type: String, required:'{PATH} is required ',lowercase: true, },
   isbn: { type: Number,required:true,unique:true},
   author: {
     type: mongoose.Schema.Types.ObjectId, 
